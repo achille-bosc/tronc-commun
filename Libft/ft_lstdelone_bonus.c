@@ -3,16 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstdelone_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: achillebosc <achillebosc@student.42.fr>    +#+  +:+       +#+        */
+/*   By: abosc <abosc@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 03:08:47 by achillebosc       #+#    #+#             */
-/*   Updated: 2024/10/25 03:14:03 by achillebosc      ###   ########.fr       */
+/*   Updated: 2024/10/25 17:44:30 by abosc            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstdelone(t_list *lst, void (*del)(void*))
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-  
 }
