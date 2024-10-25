@@ -6,7 +6,7 @@
 /*   By: abosc <abosc@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 15:55:54 by abosc             #+#    #+#             */
-/*   Updated: 2024/10/23 19:46:01 by abosc            ###   ########.fr       */
+/*   Updated: 2024/10/24 18:12:49 by abosc            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,21 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	unsigned int	i;
+	char			*str;
+	size_t			s_len;
 
 	i = 0;
-	while (i < start)
+	s_len = ft_strlen(s);
+	if (s_len <= start)
+		return (ft_strdup(""));
+	s_len -= start;
+	if (s_len < len)
+		len = s_len;
+	str = malloc(sizeof(char) * (len + 1));
+	if (str)
 	{
-		s++;
-		i++;
+		ft_memcpy(str, s + start, len);
+		str[len] = '\0';
 	}
-	s = malloc(sizeof(char *) * (len + 1));
-	if (!s)
-		return (NULL);
-	return ((char *)s);
+	return (str);
 }

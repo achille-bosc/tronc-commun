@@ -6,7 +6,7 @@
 /*   By: abosc <abosc@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 14:44:53 by abosc             #+#    #+#             */
-/*   Updated: 2024/10/23 02:09:55 by abosc            ###   ########.fr       */
+/*   Updated: 2024/10/24 20:25:07 by abosc            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@ int		ft_atoi(const char *nptr);
 void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t nmemb, size_t size);
 void	*calloc(size_t nmemb, size_t size);
-int		ft_isalnum(unsigned char c);
-int		ft_isalpha(unsigned char c);
-int		ft_isascii(unsigned char c);
+int		ft_isalnum(int c);
+int		ft_isalpha(int c);
+int		ft_isascii(int c);
 int		ft_isdigit(int c);
-int		ft_isprint(unsigned char c);
+int		ft_isprint(int c);
 char	*ft_itoa(int n);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);

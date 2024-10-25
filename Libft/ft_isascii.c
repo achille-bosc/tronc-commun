@@ -6,15 +6,15 @@
 /*   By: abosc <abosc@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 13:13:43 by abosc             #+#    #+#             */
-/*   Updated: 2024/10/16 20:51:12 by abosc            ###   ########.fr       */
+/*   Updated: 2024/10/24 20:58:32 by abosc            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(unsigned char c)
+int	ft_isascii(int c)
 {
-	if (c < 128)
+	if (c >= 0 && c <= 127)
 		return (1);
 	return (0);
 }

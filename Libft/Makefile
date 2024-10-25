@@ -33,26 +33,24 @@ SRC=ft_atoi.c\
 	ft_strtrim.c\
 	ft_substr.c\
 	ft_tolower.c\
-	ft_toupper.c\
+	ft_toupper.c
 		
 
 
 # Variables
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
-CVALFGALGS = -g -Og
 OBJ = $(SRC:.c=.o)
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
 # Règle par défaut (compilation et édition de liens)
 all: $(NAME)
-	make clean
 
-%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@ -I libft.h
 
 # Création de l'exécutable
 $(NAME): $(OBJ)
-	@ar -crs $@ $^
+		ar	rcs $(NAME) $(OBJ)
 
 # Compilation des fichiers objets
 
@@ -61,9 +59,11 @@ $(NAME): $(OBJ)
 clean:
 	rm -f $(OBJ)
 
-fclean:
-	rm -f ${OBJ} ${NAME}
+fclean: clean
+	rm -f ${NAME}
 
 # Recompilation complète
 re:
 	clean all
+
+.PHONY:		all clean fclean re

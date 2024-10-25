@@ -6,13 +6,13 @@
 /*   By: abosc <abosc@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 13:29:47 by abosc             #+#    #+#             */
-/*   Updated: 2024/10/19 19:25:29 by abosc            ###   ########.fr       */
+/*   Updated: 2024/10/24 20:22:23 by abosc            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(unsigned char c)
+int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)
 		return (16384);

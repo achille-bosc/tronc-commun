@@ -6,7 +6,7 @@
 /*   By: abosc <abosc@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 16:16:03 by abosc             #+#    #+#             */
-/*   Updated: 2024/10/24 16:27:35 by abosc            ###   ########.fr       */
+/*   Updated: 2024/10/24 20:09:30 by abosc            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ char	**ft_split(char const *s, char c)
 
 	split = (char **)malloc(sizeof(char *) * (ft_countwords(s, c) + 1));
 	if (!s || !split)
-		return (0);
+		return (NULL);
 	i = 0;
 	while (*s)
 	{
@@ -57,7 +57,7 @@ char	**ft_split(char const *s, char c)
 	return (split);
 }
 
-int	main(int argc, char **argv)
-{
-	printf("%s", ft_split(argv[1], ' ')[0]);
-}
+// int	main(int argc, char **argv)
+// {
+// 	printf("%s", ft_split(argv[1], ' ')[0]);
+// }

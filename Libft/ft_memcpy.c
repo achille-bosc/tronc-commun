@@ -6,7 +6,7 @@
 /*   By: abosc <abosc@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 10:28:20 by abosc             #+#    #+#             */
-/*   Updated: 2024/10/15 15:13:43 by abosc            ###   ########.fr       */
+/*   Updated: 2024/10/24 21:00:41 by abosc            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	unsigned char		*modifiable_dest;
 
 	i = 0;
+	if (!dest && !src)
+		return (NULL);
 	modifiable_src = src;
 	modifiable_dest = dest;
 	while (i < n)
