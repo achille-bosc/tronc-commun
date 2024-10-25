@@ -6,7 +6,7 @@
 /*   By: abosc <abosc@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 03:08:47 by achillebosc       #+#    #+#             */
-/*   Updated: 2024/10/25 17:44:30 by abosc            ###   ########.fr       */
+/*   Updated: 2024/10/25 17:51:44 by abosc            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,4 +14,6 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
+	del(lst->content);
+	free(lst);
 }

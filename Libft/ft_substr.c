@@ -6,7 +6,7 @@
 /*   By: abosc <abosc@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 15:55:54 by abosc             #+#    #+#             */
-/*   Updated: 2024/10/24 18:12:49 by abosc            ###   ########.fr       */
+/*   Updated: 2024/10/25 17:56:45 by abosc            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,9 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	unsigned int	i;
 	char			*str;
 	size_t			s_len;
 
-	i = 0;
 	s_len = ft_strlen(s);
 	if (s_len <= start)
 		return (ft_strdup(""));

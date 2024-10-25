@@ -6,15 +6,18 @@
 /*   By: abosc <abosc@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 14:44:53 by abosc             #+#    #+#             */
-/*   Updated: 2024/10/25 17:16:35 by abosc            ###   ########.fr       */
+/*   Updated: 2024/10/25 17:53:10 by abosc            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <locale.h>
-#include <unistd.h>
+#ifndef LIBFT_H
+# define LIBFT_H
+
+# include <string.h>
+# include <stdlib.h>
+# include <stdio.h>
+# include <locale.h>
+# include <unistd.h>
 
 typedef struct s_list
 {
@@ -26,11 +29,11 @@ int		ft_atoi(const char *nptr);
 void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t nmemb, size_t size);
 void	*calloc(size_t nmemb, size_t size);
-int		ft_isalnum(unsigned char c);
-int		ft_isalpha(unsigned char c);
-int		ft_isascii(unsigned char c);
+int		ft_isalnum(int c);
+int		ft_isalpha(int c);
+int		ft_isascii(int c);
 int		ft_isdigit(int c);
-int		ft_isprint(unsigned char c);
+int		ft_isprint(int c);
 char	*ft_itoa(int n);
 void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstadd_front(t_list **lst, t_list *new);
@@ -63,3 +66,5 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
+
+#endif

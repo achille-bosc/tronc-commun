@@ -1,1 +1,7 @@
 .vscode/
+obj/
+libft.a
+main.cpp
+en.subject.pdf
+a.out
+main.c
